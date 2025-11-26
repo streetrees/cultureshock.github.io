@@ -89,7 +89,7 @@
 
     .maintext{
         font-family: 'nh';
-        font-weight: 50;
+        font-weight: 100;
         width: 100%;
         color:#f05023;
         /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
@@ -167,7 +167,7 @@ RSS FEED
   overflow: hidden;
   /* background-color: #fff; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-image: url("c:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/cs_graf.jpg");
+  background-image: url("cs_graf.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -392,7 +392,7 @@ RSS FEED
   overflow: hidden;
   /* background-color: #fff; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-image: url("c:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/cs_graf.jpg");
+  background-image: url("cs_graf.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
