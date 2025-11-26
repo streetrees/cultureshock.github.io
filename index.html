@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html width="100%">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1">
+        <link href="https://github.com/streetrees/streetrees.github.io/blob/2da1fc8b8c2b7c921f82a01d250daff138d7b64e/MS%20Sans%20Serif%208pt.ttf" rel="stylesheet">
+        <link href="https://github.com/streetrees/streetrees.github.io/blob/4bb1b1abeeb9e5afb2fde1f3544d998e507d4045/UtmTimes-xOlr.ttf" rel="stylesheet">
+        <link rel="stylesheet" href="cs_landingpage.css">
+        <link rel="icon" type="image/x-icon" href="cs.png">
+        <title>Culture Shock</title>
+    </head>
+<header class="header">
+<table class="topmenusmall" >
+<tr>
+<th class="maintitlesmall" style="width:100%">
+    <b>CULTURE SHOCK BERLIN</b>
+</th>
+</tr>
+</table>
+<table class="topmenu" >
+<tr>
+<th class="maintitle" >
+    <b>CULTURE SHOCK BERLIN</b>
+</th > 
+        <th class="button1" onclick="scrollToSection('intro')" > 
+            ABOUT
+        </th>
+        <th class="button1" onclick="scrollToSection('section2')"> 
+            RECENT 
+        </th>
+        <th class="button1" onclick="scrollToSection('section3')"> 
+            SUBMIT
+        </th>
+        <th class="button1" onclick="scrollToSection('section4')"> 
+            CONTACT
+         </th>
+    </tr>
+</table>
+</header>
+<!-- <div class="skewed-bottom"></div> -->
+<body width="100vw" class="body">
+
+            <table class="maintext" >
+                <tr>
+                    <th class="intro" id="intro" >
+                        <div class="sectiontitle">
+                            about culture shock.. well 
+                        </div>
+                        <br><br>
+                        it's a Berlin-based online and print literary magazine, featuring urban insanity themes with a focus on prose, poetry, and visual arts. 
+
+                    </th>
+                </tr>
+                <tr>
+                    <th class="section2" id="section2">
+                         <div class="sectiontitle" >
+                            
+                        </div>  
+<div id="latest-posts" class="row">
+    
+</div>
+                        </th>
+                    </tr>
+
+                                <tr>
+                    <th class="section3" id="section3" >
+                         <div class="sectiontitle" >
+                            ..how to submit to culture shock
+                         </div>
+                            <br><br>
+                            submissions are closed for now
+                        
+                        <br>
+
+                
+                    </th>
+                </tr>
+
+                <tr>
+                    <th class="section4" id="section4" >
+                        <div class="sectiontitle" >
+                        ..how to contact julia in various ways
+                        </div>
+                        <br>
+                        instagram: @cultureshock_berlin
+                        <br><br>
+                        email: cultureshocksubmission@gmail.com
+
+                
+                    </th>
+                </tr>
+            </table>
+</body>
+<script>
+
+    function scrollToSection(sectionId) {
+      // Get the target section by its ID
+      const section = document.getElementById(sectionId);
+
+      // Scroll to the section with smooth scrolling behavior
+      section.scrollIntoView({
+        behavior: 'smooth', // Makes the scrolling smooth
+        block: 'start' // Scroll to the top of the section
+      });
+    }
+
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
+
+if (window.innerWidth < 500) {
+window.addEventListener("scroll", function () {
+    const title = document.querySelector(".maintitlesmall");
+    const scrollY = window.scrollY;
+
+    // Adjust font size and text alignment
+    if (scrollY > 100) {
+        title.style.fontSize = "150%";
+        title.style.textAlign = "left";
+    } else {
+        title.style.fontSize = "200%";
+        title.style.textAlign = "center";
+    }
+});
+// window.addEventListener("scroll", function () {
+//     const menu = document.querySelector(".topmenu");
+//     const scrollY = window.scrollY;
+
+//     // Scroll threshold at 100px (adjust as needed)
+//     if (scrollY > 100) {
+//         menu.style.marginTop = "10%";
+//     } else {
+//         menu.style.marginTop = "20%";
+//     }
+// });
+}
+
+const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fcultureshockber.substack.com%2Ffeed' ;
+
+async function fetchLatestPosts() {
+  try {
+    const response = await fetch(feedUrl);
+    const data = await response.json();
+
+    // Get up to three items from the feed
+    const latestItems = (data.items || []).slice(0, 3);
+
+    if (latestItems.length > 0) {
+      const postsHTML = latestItems.map(item => {
+        // Assuming the first image in the content is the featured image
+        const imageUrlMatch = item.content.match(/<img src="([^"]+)"/);
+        const imageUrl = imageUrlMatch ? imageUrlMatch[1] : ''; // Default to empty if no image found
+
+        // Extract title and subtitle (assuming subtitle is in the description)
+        const title = item.title;
+        const subtitle = item.description || '';
+
+        return `
+          <div class="post col-12 my-4">
+            <a href="${item.link}" class="link_with_image d-flex align-items-center gap-3" target="_blank" style="text-decoration:none">
+              <div class="post_image_wrapper">
+                ${imageUrl ? `<img src="${imageUrl}" alt="${title}" class="featured-image">` : ''}
+              </div>
+              <div class="post_meta_data">
+                <h3>${title}</h3>
+                <p><strong>${subtitle}</strong></p>
+              </div>
+            </a>
+          </div>
+        `;
+      }).join('');
+
+      // Update HTML with the latest posts details
+      document.getElementById('latest-posts').innerHTML = postsHTML;
+    } else {
+      document.getElementById('latest-posts').textContent = '';
+    }
+  } catch (error) {
+    document.getElementById('latest-posts').textContent = 'Failed to load the latest posts.';
+    console.error('Error fetching the RSS feed:', error);
+  }
+}
+
+fetchLatestPosts();
+
+</script>
+  
+</html>

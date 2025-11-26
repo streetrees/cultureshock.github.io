@@ -1,0 +1,473 @@
+@media (max-width: 500px) {
+
+    .body{
+        z-index: 10;
+        /* background-image: url("stars4.gif"); */
+        background-color: white;
+    }
+
+    .header {
+        display:block;
+        align-items: center;
+        position:fixed;
+        height: 30px;
+        top: 0;                    
+        left: 0;                  
+        padding: 0;                
+        margin: 0;
+        z-index: 100;
+        /* background-image: url("moon.jpg"); */
+        /* background-color: yellow; */
+        /* background-size: cover; */
+        background-position: center;
+        transition: all 0.3s ease;
+    }
+
+    /* .header{
+        display:none
+    } */
+
+        .topmenu{
+        position: relative;
+        font-family: 'nh';
+        /* font-size:100%; */
+        width: 100%;
+        transition: margin-top 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* .topmenu{
+        display:none
+    } */
+    
+
+     .maintitle {
+        display:none
+    }
+    
+     .maintitlesmall{
+        /* background-color: pink; */
+        height: 100%;  
+        font-family: 'sp';
+        color:#f05023;
+        font-size: 200%;
+        padding-left: 3%;
+        text-align: center;
+        transition: font-size 0.3s ease;
+     }
+
+    /* .maintitlesmall{
+        display:none
+    } */
+    
+
+    .topmenusmall{
+        /* background-color: lightseagreen; */
+        font-family: 'sp';
+        color: #f05023;
+        position:sticky;
+        width: 100%;
+    }
+
+
+     .button1 {
+        font-family: 'nh';
+        font-size: 110%;
+        color: #f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        border-width: 2px;
+        cursor: pointer;
+        width: 10%;
+        transition: all 0.3s ease;
+    }
+    
+    Shrink behavior for buttons 
+    .header.shrink .button1 {
+        font-size: 75%;   
+        width: 5%;        
+    }
+
+    .maintext{
+        font-family: 'nh';
+        font-weight: 50;
+        width: 100%;
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        margin-top: 2%;
+    /* margin-left: auto; */
+    /* margin-right: 10%; */
+    }
+
+    .sectiontitle{
+        margin-top: 3%;
+        font-family: 'nh';
+        color:#f05023;
+        font-size: 150%;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        display: flex;
+        justify-content: center;   /* Horizontal centering */
+        /* align-items: right;       Vertical centering   */
+    }
+
+    .intro{
+        /* background-color: lightblue; */
+    padding-top: 60%;              
+    /* height: 50vh; */
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        font-size:100%;
+        text-align: center;
+
+    }
+
+
+    .section2{
+        /* background-color: lightseagreen; */
+        margin-top: -25%;
+        /* padding-top: 10%; */
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;   */
+        font-size:100%;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .section3{
+        height:100vh;
+        /* padding-top: 5%; */
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        font-size:100%;
+    }
+
+    .section4{
+        height: 100vh;
+        /* padding-top: 5%; */
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        font-size:100%;
+    }
+
+    /*
+=================================================
+RSS FEED
+=================================================
+*/
+
+.rss_container {
+  background-color: #d0e3e4;
+  padding: 20px 0;
+}
+
+/* Each post takes the full row */
+.post {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  /* background-color: #fff; */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-image: url("c:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/cs_graf.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* First post = top third of the image */
+.post:nth-child(1) {
+  background-position: center top;
+}
+
+/* Second post = middle of the image */
+.post:nth-child(2) {
+  background-position: center center;
+}
+
+/* Third post = bottom third of the image */
+.post:nth-child(3) {
+  background-position: center bottom;
+}
+
+/* Add a subtle overlay so text is readable */
+.post_meta_data {
+  background: rgba(255, 153, 125, 0.8);
+  padding: 15px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove the inside image since we’re using a BG now */
+.post_image_wrapper {
+  display: none;
+}
+
+.post h3 {
+    font-family: 'nh';
+  color: white;
+  font-size: 100%;
+  text-decoration: none;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.post p {
+    font-family: 'nh';
+  color: #555;
+  text-decoration: none;
+  font-size: 80%;
+  margin: 0;
+}
+
+
+}
+
+
+@media (min-width: 500px) {
+
+    .body{
+        z-index: 10;
+        /* background-image: url("stars4.gif"); */
+        background-color: white;
+    }
+
+    .header {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        /* background-image: url("moon.jpg"); */
+        background-size: cover;
+        background-position: center;
+        z-index: 100;
+        transition: all 0.3s ease;
+    }
+    
+    /* Add this for the smaller version */
+    .header.shrink {
+        height: 5%; /* or whatever smaller height you prefer */
+    }
+
+
+
+     .maintitle {
+        font-family: 'sp';
+        color: #f05023;
+        font-size: 250%;
+        padding-left: 3%;
+        text-align: left;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        transition: all 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    .header.shrink .maintitle {
+        padding-top: 15px;  /* Only applies when scrolled */
+        font-size: 150%;    /* Optional: scale down title a bit */
+    }
+    
+    .maintitlesmall{
+        display:none
+    }
+    
+    
+    .topmenu{
+        /* background-image: url("IMG_1766.jpg"); */
+        font-family: 'nh';
+        font-size:150%;
+        border-spacing: 10px;
+        display: float;
+        position:fixed;
+        width: 100%;
+        left: 0;               
+        padding: 0; 
+        padding-right: 3%;               
+        margin: 0;
+    }
+
+
+    .topmenusmall{
+        display:none
+    }
+
+
+     .button1 {
+        font-family: 'nh';
+        font-size: 90%;
+        color: #f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        border-width: 2px;
+        cursor: pointer;
+        width: 10%;
+        transition: all 0.3s ease;
+    }
+    
+    /* Shrink behavior for buttons */
+    .header.shrink .button1 {
+        font-size: 75%;   /* slightly smaller */
+        width: 5%;        /* narrower if desired */
+    }
+
+    .image{
+    
+        height:400px
+    
+        }
+
+    .maintext{
+        font-family: 'nh';
+        font-weight: 50;
+        width: 60%;
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        margin-top: 2%;
+    margin-left: auto;
+    margin-right: 10%;
+    }
+
+    .sectiontitle{
+        margin-top: 3%;
+        font-family: 'nh';
+        color:#f05023;
+        font-size: 190%;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        display: flex;
+        justify-content: center;   /* Horizontal centering */
+        align-items: right;       /* Vertical centering */  
+    }
+
+    .intro{
+        height: 100vh;
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        font-size:200%;
+        text-align: center;
+
+    }
+
+
+    .section2{
+        /* padding-top: 10%; */
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;   */
+        font-size:200%;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .section3{
+        height:100vh;
+        padding-top: 2%;
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        font-size:200%;
+    }
+
+    .section4{
+        height: 100vh;
+        padding-top: 2%;
+        color:#f05023;
+        /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
+        font-size:200%;
+    }
+
+    /*
+=================================================
+RSS FEED
+=================================================
+*/
+
+.rss_container {
+  background-color: #d0e3e4;
+  padding: 20px 0;
+}
+
+/* Each post takes the full row */
+.post {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  /* background-color: #fff; */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-image: url("c:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/cs_graf.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* First post = top third of the image */
+.post:nth-child(1) {
+  background-position: center top;
+}
+
+/* Second post = middle of the image */
+.post:nth-child(2) {
+  background-position: center center;
+}
+
+/* Third post = bottom third of the image */
+.post:nth-child(3) {
+  background-position: center bottom;
+}
+
+/* Add a subtle overlay so text is readable */
+.post_meta_data {
+  background: rgba(255, 153, 125, 0.8);
+  padding: 15px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove the inside image since we’re using a BG now */
+.post_image_wrapper {
+  display: none;
+}
+
+.post h3 {
+    font-family: 'nh';
+  color: white;
+  font-size: 80%;
+  text-decoration: none;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.post p {
+    font-family: 'nh';
+  color: #555;
+  text-decoration: none;
+  font-size: 60%;
+  margin: 0;
+}
+
+
+}
+
+
+/* ## colors 
+## light red: #A62F27
+## light blue: #7DA6CB
+## dark red: #5B1D16
+## teal: #018281
+## green: #80C141
+## orange: #FB9D10 */
+
+@font-face  {
+    font-family:'nh';
+    src: url("Neue-Haas-Grotesk-Font/NHaasGroteskTXPro-55Rg.ttf")
+ }
+
+@font-face  {
+    font-family:'sp';
+    src: url("sneakers-pro_uMdqS/Sneakers Pro/Sneakers Pro Narrow/Sneakers Pro Narrow.ttf")
+ }
+
+
+
+
+
+
+
+
