@@ -75,7 +75,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 20%; /* same initial height as header */
+    height: 18%; /* same initial height as header */
     background-image: url("orange.jpeg");
     background-size: cover;
     background-position: center;
@@ -114,6 +114,7 @@
         color:white;
         font-size: 200%;
         padding-left: 3%;
+        padding-top: 2%;
         text-align: center;
         transition: font-size 0.3s ease;
      }
@@ -129,11 +130,12 @@
         color: #f05023;
         position:sticky;
         width: 100%;
+        transition: padding 0.3s ease;
     }
 
 
      .button1 {
-        padding-top: 2%;
+        padding-top: 1%;
         font-family: 'nh';
         font-size: 110%;
         color: white;
@@ -147,12 +149,12 @@
     Shrink behavior for buttons 
     .header.shrink .button1 {
         font-size: 75%;   
-        width: 5%;        
+        width: 5%;     
     }
 
     .maintext{
         font-family: 'nh';
-        font-weight: 100;
+        font-weight: 200;
         width: 30%;
         margin-left: 4%;
         color:#f05023;
