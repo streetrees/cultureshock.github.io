@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="cs.png">
         <title>Culture Shock</title>
     </head>
+<div class="header-bg">
 <header class="header">
 <table class="topmenusmall" >
 <tr>
@@ -37,9 +38,16 @@
     </tr>
 </table>
 </header>
+</div>
 <!-- <div class="skewed-bottom"></div> -->
-<body width="100vw" class="body">
-
+<body width="100vw" class="body" >
+  <div class="table-wrapper">
+<table class="contents_table"  >
+  <tr>  
+    <th class="image_border">
+      
+    </th>
+    <th>
             <table class="maintext" >
                 <tr>
                     <th class="intro" id="intro" >
@@ -90,6 +98,10 @@
                     </th>
                 </tr>
             </table>
+    </th>
+  </tr>
+    </table>
+    </div>
 </body>
 <script>
 
@@ -104,13 +116,26 @@
       });
     }
 
-    const header = document.querySelector('.header');
+    // const header = document.querySelector('.header');
 
-    window.addEventListener('scroll', () => {
+//     window.addEventListener('scroll', () => {
+//     if (window.scrollY > 50) {
+//         header.classList.add('shrink');
+//     } else {
+//         header.classList.remove('shrink');
+//     }
+// });
+
+const header = document.querySelector('.header');
+const headerBg = document.querySelector('.header-bg');
+
+window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('shrink');
+        headerBg.classList.add('shrink');
     } else {
         header.classList.remove('shrink');
+        headerBg.classList.remove('shrink');
     }
 });
 

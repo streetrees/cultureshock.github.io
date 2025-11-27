@@ -1,27 +1,89 @@
 @media (max-width: 500px) {
 
+    /* .body{
+        z-index: 10;
+        background-color: white;
+    } */
+
+    .container, .wrapper, body {
+    padding: 0;
+    margin: 0;
+}
+
     .body{
+        position: static;
+        width:100%;
         z-index: 10;
         /* background-image: url("stars4.gif"); */
         background-color: white;
     }
 
+    .table-wrapper {
+    overflow-y: auto;     /* vertical scroll only */
+    overflow-x: hidden;   /* NO horizontal scroll */
+    width: 100%;      /* full width of its parent */
+    }
+
+    .contents_table{
+    /* table-layout: fixed; */
+    width:100%;
+    margin-left: -5px;
+    margin: 0;           /* Pushes table to the far left */
+    padding: 0;
+    border-collapse: collapse;
+    }
+
+        .image_border{
+        background-position: -430px ;
+        text-align: left;    /* Ensures cell aligns left */
+        padding: 0;  
+        position: static;
+        margin-left:0;
+        min-width: 20vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/blue2.jpg");
+    }
+
     .header {
-        display:block;
+        /* background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg"); */
+        background-attachment: scroll;
+        background-position: center;
+        display:fixed;
         align-items: center;
         position:fixed;
-        height: 30px;
+        height: 20%;
         top: 0;                    
         left: 0;                  
         padding: 0;                
         margin: 0;
         z-index: 100;
-        /* background-image: url("moon.jpg"); */
-        /* background-color: yellow; */
-        /* background-size: cover; */
         background-position: center;
         transition: all 0.3s ease;
     }
+
+.header.shrink {
+    height: 10%;  /* whatever your shrunken height is */
+}
+
+.header-bg.shrink {
+    height: 10%;  /* background shrinks at exactly same rate */
+}
+
+    .header-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* same initial height as header */
+    background-image: url("orange.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 50; /* sits behind header */
+    overflow: hidden;
+}
 
     /* .header{
         display:none
@@ -46,10 +108,10 @@
     }
     
      .maintitlesmall{
-        /* background-color: pink; */
+        /* background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg"); */
         height: 100%;  
         font-family: 'sp';
-        color:#f05023;
+        color:white;
         font-size: 200%;
         padding-left: 3%;
         text-align: center;
@@ -71,9 +133,10 @@
 
 
      .button1 {
+        padding-top: 2%;
         font-family: 'nh';
         font-size: 110%;
-        color: #f05023;
+        color: white;
         /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
         border-width: 2px;
         cursor: pointer;
@@ -90,7 +153,8 @@
     .maintext{
         font-family: 'nh';
         font-weight: 100;
-        width: 100%;
+        width: 30%;
+        margin-left: 4%;
         color:#f05023;
         /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
         margin-top: 2%;
@@ -167,7 +231,7 @@ RSS FEED
   overflow: hidden;
   /* background-color: #fff; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-image: url("cs_graf.jpg");
+  background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -189,7 +253,7 @@ RSS FEED
 
 /* Add a subtle overlay so text is readable */
 .post_meta_data {
-  background: rgba(255, 153, 125, 0.8);
+  background: rgba(255, 153, 125, 0.3);
   padding: 15px 20px;
   position: relative;
   z-index: 2;
@@ -223,14 +287,49 @@ RSS FEED
 
 @media (min-width: 500px) {
 
+    .container, .wrapper, body {
+    padding: 0;
+    margin: 0;
+}
+
     .body{
+        position: static;
+        width:100%;
         z-index: 10;
         /* background-image: url("stars4.gif"); */
         background-color: white;
     }
 
+    .table-wrapper {
+    overflow-y: auto;     /* vertical scroll only */
+    overflow-x: hidden;   /* NO horizontal scroll */
+    width: 100%;      /* full width of its parent */
+    }
+
+    .contents_table{
+    /* table-layout: fixed; */
+    width:100%;
+    margin-left: -5px;
+    margin: 0;           /* Pushes table to the far left */
+    padding: 0;
+    border-collapse: collapse;
+    }
+
+    .image_border{
+        background-position: -430px ;
+        text-align: left;    /* Ensures cell aligns left */
+        padding: 0;  
+        position: static;
+        margin-left:0;
+        min-width: 30vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/blue2.jpg");
+    }
+
     .header {
-        height: 15%;
+        background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg");
+        height: 20%;
         width: 100%;
         display: flex;
         align-items: center;
@@ -255,7 +354,7 @@ RSS FEED
 
      .maintitle {
         font-family: 'sp';
-        color: #f05023;
+        color: white;
         font-size: 250%;
         padding-left: 3%;
         text-align: left;
@@ -264,7 +363,8 @@ RSS FEED
     }
 
     .header.shrink .maintitle {
-        padding-top: 15px;  /* Only applies when scrolled */
+        padding-top: 15px;
+        padding-bottom: 15px;  /* Only applies when scrolled */
         font-size: 150%;    /* Optional: scale down title a bit */
     }
     
@@ -296,7 +396,7 @@ RSS FEED
      .button1 {
         font-family: 'nh';
         font-size: 90%;
-        color: #f05023;
+        color: white;
         /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
         border-width: 2px;
         cursor: pointer;
@@ -322,9 +422,9 @@ RSS FEED
         width: 60%;
         color:#f05023;
         /* text-shadow: 1px 1px 2px white, -1px -1px 2px black;  */
-        margin-top: 2%;
+        margin-top: 4%;
     margin-left: auto;
-    margin-right: 10%;
+    margin-right: 19%;
     }
 
     .sectiontitle{
@@ -392,7 +492,7 @@ RSS FEED
   overflow: hidden;
   /* background-color: #fff; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-image: url("cs_graf.jpg");
+  background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -414,7 +514,7 @@ RSS FEED
 
 /* Add a subtle overlay so text is readable */
 .post_meta_data {
-  background: rgba(255, 153, 125, 0.8);
+  background: rgba(255, 153, 125, 0.3);
   padding: 15px 20px;
   position: relative;
   z-index: 2;
@@ -426,7 +526,7 @@ RSS FEED
 }
 
 .post h3 {
-    font-family: 'nh';
+  font-family: 'nh';
   color: white;
   font-size: 80%;
   text-decoration: none;
