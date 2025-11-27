@@ -42,7 +42,7 @@
         min-width: 20vw;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/blue2.jpg");
+        background-image: url("blue2.jpg");
     }
 
     .header {
@@ -231,7 +231,7 @@ RSS FEED
   overflow: hidden;
   /* background-color: #fff; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg");
+  background-image: url("orange.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -324,11 +324,11 @@ RSS FEED
         min-width: 30vw;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/blue2.jpg");
+        background-image: url("blue2.jpg");
     }
 
     .header {
-        background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg");
+        background-image: url("orange.jpeg");
         height: 20%;
         width: 100%;
         display: flex;
@@ -492,7 +492,7 @@ RSS FEED
   overflow: hidden;
   /* background-color: #fff; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-image: url("C:/Users/storm/OneDrive/Documents/GitHub/cultureshock.github.io/orange.jpeg");
+  background-image: url("orange.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
